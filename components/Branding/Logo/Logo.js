@@ -9,7 +9,7 @@ function Logo(props) {
   const { type, size } = props;
   return (
     <span className={cx(classes[type], classes.logo)}>
-      <img src={logo} alt="logo" width={70}/>
+      <img src={logo} alt="logo" width={70} heigh={60}/>
       { type !== 'only' ? brand.name : '' }
     </span>
   );
