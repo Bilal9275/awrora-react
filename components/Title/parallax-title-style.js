@@ -18,7 +18,7 @@ const titleStyles = makeStyles({ uniqId: 'parallax_title' })((theme, _params, cl
     left: 0,
     overflow: 'hidden',
     textTransform: 'uppercase',
-    fontSize: 200,
+    fontSize: 170,
     display: 'flex',
     justifyContent: 'center',
     [theme.breakpoints.down('lg')]: {
@@ -26,11 +26,11 @@ const titleStyles = makeStyles({ uniqId: 'parallax_title' })((theme, _params, cl
       top: -50
     },
     [theme.breakpoints.down('md')]: {
-      fontSize: 120
+      fontSize: 80
     },
     [theme.breakpoints.down('sm')]: {
       top: 0,
-      fontSize: 60
+      fontSize: 45
     },
     [`&.${classes.static}`]: {
       opacity: 0.4,

@@ -15,7 +15,7 @@ import link from '~/public/text/link';
 import imgAPI from '~/public/images/imgAPI';
 import { useText, useTextAlign, useTextGradient } from '~/theme/common';
 import useStyles from './slider-style';
-import ai from "../../../public/images/Ai1.jpeg"
+import ai from "../../../public/images/Ai1.png"
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`;
