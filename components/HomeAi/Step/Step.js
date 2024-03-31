@@ -8,7 +8,7 @@ import { useText } from '~/theme/common';
 import Icons3d from '../../Icons3d';
 import ParallaxTitle from '../../Title/ParallaxTitle';
 import useStyles from './step-style';
-import mainAi from "../../../public/images/main-Ai.jpeg"
+import mainAi from "../../../public/images/main-Ai.png"
 function Step() {
   const { classes, cx } = useStyles();
   const { classes: text } = useText();

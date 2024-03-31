@@ -124,7 +124,7 @@ const aboutStyles = makeStyles({ uniqId: 'about_landing' })((theme, _params, cla
     overflow: 'hidden',
     position: 'relative',
     borderRadius: theme.rounded.medium,
-    padding: theme.spacing(12, 3, 1),
+    padding: theme.spacing(5, 3, 1),
     '&:before': {
       content: '""',
       filter: 'blur(20px)',

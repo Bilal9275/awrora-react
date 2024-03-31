@@ -22,7 +22,6 @@ import yt from '~/youtube';
 import { useText, useTextAlign } from '~/theme/common';
 import Title from '../../Title';
 import useStyles from './about-style';
-import AI1 from "../../../public/images/AI-10.jpeg"
 
 const Transition = React.forwardRef(function Transition(props, ref) { // eslint-disable-line
   return <Zoom ref={ref} {...props} />;
@@ -101,12 +100,7 @@ function MainFeature() {
           <Grid item md={6} xs={12} className={classes.featureWrap}>
             <div className={classes.counter}>
               <div className={classes.lower}>
-                <img src={AI1}  width={600} height={400} alt="Ai1"/>
-                {/* <Paper className={classes.paper}>
-                  <div className={classes.icon}>
-                    <img src={AI1}/>
-                    <Icons3d icon="mdi-memory" color="primary" />
-                  </div>
+                <Paper className={classes.paper}>
                   <div className={cx(classes.glow, classes.primary)}>
                     <Typography variant="h4">
                       +600
@@ -115,11 +109,11 @@ function MainFeature() {
                       {t('ai-landing.about_counter1')}
                     </Typography>
                   </div>
-                </Paper> */}
-                {/* <Paper className={classes.paper}>
-                  <div className={classes.icon}>
+                </Paper>
+                <Paper className={classes.paper}>
+                  {/* <div className={classes.icon}>
                     <Icons3d icon="mdi-clock-time-eight-outline" color="purple" />
-                  </div>
+                  </div> */}
                   <div className={cx(classes.glow, classes.purple)}>
                     <Typography variant="h4">
                       +200x
@@ -128,13 +122,13 @@ function MainFeature() {
                       {t('ai-landing.about_counter2')}
                     </Typography>
                   </div>
-                </Paper> */}
+                </Paper>
               </div>
-              {/* <div className={classes.higher}> */}
-                {/* <Paper className={classes.paper}>
-                  <div className={classes.icon}>
+              <div className={classes.higher}>
+                <Paper className={classes.paper}>
+                  {/* <div className={classes.icon}>
                     <Icons3d icon="mdi-atom" color="secondary" />
-                  </div>
+                  </div> */}
                   <div className={cx(classes.glow, classes.secondary)}>
                     <Typography variant="h4">
                       50x
@@ -145,9 +139,9 @@ function MainFeature() {
                   </div>
                 </Paper>
                 <Paper className={classes.paper}>
-                  <div className={classes.icon}>
+                  {/* <div className={classes.icon}>
                     <Icons3d icon="mdi-robot-vacuum" color="accent" />
-                  </div>
+                  </div> */}
                   <div className={cx(classes.glow, classes.accent)}>
                     <Typography variant="h4">
                       +20M
@@ -156,8 +150,8 @@ function MainFeature() {
                       {t('ai-landing.about_counter4')}
                     </Typography>
                   </div>
-                </Paper> */}
-              {/* </div> */}
+                </Paper>
+              </div>
             </div>
           </Grid>
           <Grid item md={6} xs={12}>
