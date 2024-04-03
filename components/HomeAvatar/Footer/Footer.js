@@ -26,7 +26,7 @@ function Footer() {
     <div className={classes.root}>
       <ParallaxFullBig />
       <Container maxWidth="lg" component="footer">
-        <Grid container spacing={6} direction={isMobile ? 'column-reverse' : 'row'}>
+        {/* <Grid container spacing={6} direction={isMobile ? 'column-reverse' : 'row'}>
           <Grid item xs={12} md={5}>
             <div className={classes.logo}>
               <Logo type="only" size="large" />
@@ -68,7 +68,7 @@ function Footer() {
           <Grid item xs={12} md={7}>
             <ContactForm />
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </div>
   );
