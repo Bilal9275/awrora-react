@@ -49,7 +49,7 @@ const headerStyles = makeStyles({ uniqId: 'header' })((theme, _params, classes) 
       boxShadow: theme.palette.mode === 'dark' ? `0px 1px 36px -16px ${theme.palette.common.black}` : `0px 1px 36px -16px ${theme.palette.primary.light}`,
       [`& .${classes.logo}`]: {
         '& img': {
-          height: 34,
+          height: 62,
         }
       },
       '& nav': {

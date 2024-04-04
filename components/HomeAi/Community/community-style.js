@@ -199,6 +199,18 @@ const businessStyles = makeStyles({ uniqId: 'business' })((theme, _params, class
       }
     }
   },
+  step: {
+    [theme.breakpoints.up('sm')]: {
+      marginTop: theme.spacing(15),
+      textAlign: 'center',
+    },
+    '& h6': {
+      fontWeight: theme.typography.fontWeightBold,
+    },
+    [`& .${classes.item}`]: {
+      opacity: 1
+    }
+  },
 }));
 
 // TODO jss-to-tss-react codemod: usages of this hook outside of this file will not be converted.

@@ -8,95 +8,13 @@ import { useTranslation } from 'next-i18next';
 import ParallaxTitle from '../../Title/ParallaxTitle';
 import { useText, useTextAlign } from '~/theme/common';
 import useStyles from './community-style';
-
-const businessData = [
-  {
-    icon: 'ion-logo-github',
-    name: 'Github',
-    type: 'large',
-    color: 'Primary',
-    rotate: -90,
-    x: 0,
-    y: 0
-  },
-  {
-    icon: 'ion-md-send',
-    name: 'telegram',
-    type: 'medium',
-    color: 'Secondary',
-    rotate: 0,
-    x: 320,
-    y: 10
-  },
-  {
-    icon: 'ion-logo-twitter',
-    name: 'twitter',
-    type: 'medium',
-    color: 'Secondary',
-    rotate: 180,
-    x: 40,
-    y: 315
-  },
-  {
-    icon: 'ion-md-mail',
-    name: 'Mailinglist',
-    type: 'small',
-    color: 'Accent',
-    rotate: 180,
-    x: 275,
-    y: 295
-  },
-  {
-    icon: 'ion-logo-reddit',
-    name: 'reddit',
-    type: 'large',
-    color: 'Primary',
-    rotate: 120,
-    x: 425,
-    y: 303
-  },
-  {
-    icon: 'ion-logo-facebook',
-    name: 'facebook',
-    type: 'medium',
-    color: 'Secondary',
-    rotate: 80,
-    x: 748,
-    y: 277
-  },
-  {
-    icon: 'ion-logo-youtube',
-    name: 'YouTube',
-    type: 'small',
-    color: 'Accent',
-    rotate: 120,
-    x: 580,
-    y: 100
-  },
-  {
-    icon: 'ion-md-wifi',
-    name: 'podcast',
-    type: 'small',
-    color: 'Accent',
-    rotate: -60,
-    x: 720,
-    y: 10
-  },
-  {
-    icon: 'ion-md-chatboxes',
-    name: 'discord',
-    type: 'large',
-    color: 'Primary',
-    rotate: 0,
-    x: 873,
-    y: 0
-  }
-];
-
+import Grid from '@mui/material/Grid';
+import roadmap from "../../../public/images/roadmap.jpeg"
+import useMediaQuery from '@mui/material/useMediaQuery';
 function Business() {
   const { classes, cx } = useStyles();
   const theme = useTheme();
-
+  const isDesktop = useMediaQuery(theme => theme.breakpoints.up('md'));
   const { t } = useTranslation('common');
   const { classes: text } = useText();
   const { classes: align } = useTextAlign();
@@ -113,8 +31,9 @@ function Business() {
           {t('ai-landing.community_desc')}
         </p>
       </Box>
-      <div className={classes.circleGroup}>
-        {businessData.map((item, index) => (
+      <Grid container className={classes.step} spacing={isDesktop ? 6 : 0}>
+      <img src={roadmap} alt='roadmap' width="100%"/>
+        {/* {businessData.map((item, index) => (
           <div key={index.toString()}>
             <ScrollAnimation
               animateOnce
@@ -127,6 +46,7 @@ function Business() {
                 className={cx(classes.circle, classes['fill' + item.color], classes[item.type])}
                 style={{ top: item.y + 'px', left: item.x + 'px' }}
               >
+                
                 <svg style={{ transform: `rotate(${item.rotate}deg)` }}>
                   <use xlinkHref={'/images/decoration/circle-' + item.type + '.svg#main'} />
                 </svg>
@@ -139,8 +59,8 @@ function Business() {
               </div>
             </ScrollAnimation>
           </div>
-        ))}
-      </div>
+        ))} */}
+      </Grid>
     </Container>
   );
 }
