@@ -172,191 +172,44 @@ function BannerSlider() {
       </Dialog>
       <div className={classes.bannerWrap}>
         <div className={classes.carousel}>
-          <Carousel
-            className={classes.slider}
-            {...slickOptions}
-            ref={slider}
-            afterChange={handleAfterChange}
-          >
             <div className={classes.slide} data-slide-id="slide1">
               <div className={classes.inner}>
-                <div className={cx(classes.img, classes.backgroundBanner)}>
-                  <div className={classes.decoMask}>
-                    <svg className={classes.main}>
-                      <use xlinkHref="/images/decoration/banner-mask.svg#main" />
-                    </svg>
-                    <svg className={classes.darken}>
-                      <use xlinkHref="/images/decoration/banner-mask.svg#main" />
-                    </svg>
-                  </div>
-                  <div className={classes.decoLine}>
-                    <svg className={classes.primary}>
-                      <use xlinkHref="/images/decoration/banner-line.svg#main" />
-                    </svg>
-                    <svg className={classes.secondary}>
-                      <use xlinkHref="/images/decoration/banner-line.svg#main" />
-                    </svg>
-                  </div>
-                  {!play || isTablet ? <img className={classes.cover} src={imgAPI.photosL[49]} alt="cover" /> : null}
-                  {yt.use ? (
-                    <div className={classes.video}>
-                      <YouTube
-                        videoId="0cdLuY6R_kI"
-                        opts={opts}
-                        onReady={_onReady}
-                        onEnd={_onEnd}
-                        onPlay={_onPlay}
-                      />
-                    </div>
-                  ) : (
-                    <img className={classes.cover} src={imgAPI.photosL[49]} alt="cover" />
-                  )}
-                </div>
                 <Container>
                   <Grid spacing={6} container>
-                    <Grid item md={7} xs={12}>
+                    <Grid item md={5} xs={12}>
                       <Box px={{ sm: 3 }}>
                         <div className={classes.text}>
-                          <h4 className={text.title}>
-                            {t('fintech.banner_title')}
+                          <h4 className={text.titlePresale}>
+                            {t('fintech.banner_title')}<br/>
                             <span className={cx(theme.palette.mode === 'dark' ? gradient.tripleMain : gradient.tripleMain, text.uppercase)}>
-                              &nbsp;
+                              
                               {t('fintech.banner_highlight')}
                             </span>
                           </h4>
-                          <h5 className={text.subtitle}>
+                          <span className={text.subtitlePresale}>
                             {t('fintech.banner_desc')}
-                          </h5>
+                          </span>
                           <div className={cx(classes.btnArea, classes.download)}>
-                            <a href="#">
-                              <img src="/images/wallet/app-store.png" alt="app store" />
-                            </a>
-                            <a href="#">
-                              <img src="/images/wallet/play-store.png" alt="play store" />
-                            </a>
+                           
                           </div>
                         </div>
                       </Box>
                     </Grid>
-                    <Grid item md={5} xs={12}>
+                    <Grid item md={7} xs={12}>
                       <div className={classes.decoBanner}>
-                        <div className={classes.mobileArt}>
-                          <MobileApp
-                            screen={imgAPI.apps[14]}
-                            top={imgAPI.apps[8]}
-                            left={imgAPI.apps[10]}
-                            right={imgAPI.apps[9]}
-                          />
-                        </div>
+                      <h6 className={text.titlePresaleSecond}>
+                            {t('fintech.join')}<br/>
+                            <span className={cx(theme.palette.mode === 'dark' ? gradient.tripleMain : gradient.tripleMain, text.uppercase)}>
+                              
+                              {t('fintech.banner_highlight')}
+                            </span>
+                          </h6>
                       </div>
                     </Grid>
                   </Grid>
                 </Container>
               </div>
             </div>
-            <div className={classes.slide} data-slide-id="slide2">
-              <div className={classes.inner}>
-                <Container>
-                  <Grid container spacing={4} justifyContent="flex-end" alignItems="center" direction={isTablet ? 'column-reverse' : 'row'}>
-                    <Grid item md={6} sm={12}>
-                      <div className={classes.decoBanner}>
-                        <div className={classes.sharingArt}>
-                          <SharingArt
-                            personBig={imgAPI.avatar[12]}
-                            personMedium={imgAPI.avatar[11]}
-                            personSmall1={imgAPI.avatar[20]}
-                            personSmall2={imgAPI.avatar[21]}
-                          />
-                        </div>
-                      </div>
-                    </Grid>
-                    <Grid item md={6} xs={12}>
-                      <div className={classes.text}>
-                        <h4 className={text.title}>
-                          {t('fintech.banner_title')}
-                          <span className={cx(theme.palette.mode === 'dark' ? gradient.tripleLight : gradient.tripleMain, text.uppercase)}>
-                            &nbsp;
-                            {t('fintech.banner_highlight')}
-                          </span>
-                        </h4>
-                        <h5 className={text.subtitle}>
-                          {t('fintech.banner_desc')}
-                        </h5>
-                        <div className={classes.btnArea}>
-                          <Button size="large" color="primary" variant="contained" href={link.register} className={classes.button}>
-                            {t('btn_get')}
-                          </Button>
-                          <Button size="large" color="secondary" variant="outlined" href="#" className={classes.button}>
-                            {t('btn_detail')}
-                          </Button>
-                        </div>
-                      </div>
-                    </Grid>
-                  </Grid>
-                </Container>
-              </div>
-            </div>
-            <div className={cx(classes.slide, classes.centerContent)} data-slide-id="slide3">
-              <div className={classes.inner}>
-                <Container>
-                  <Grid container justifyContent="center">
-                    <Grid item md={12} sm={12}>
-                      <div className={cx(classes.text, align.textCenter)}>
-                        <h4 className={text.title}>
-                          {t('fintech.banner_title')}
-                          <span className={cx(theme.palette.mode === 'dark' ? gradient.tripleLight : gradient.tripleMain, text.uppercase)}>
-                            &nbsp;
-                            {t('fintech.banner_highlight')}
-                          </span>
-                        </h4>
-                        <h5 className={text.subtitle}>
-                          {t('fintech.banner_desc')}
-                        </h5>
-                      </div>
-                    </Grid>
-                    <Grid item md={12} xs={12}>
-                      <div className={cx(classes.img, classes.hBanner)}>
-                        <div className={cx(classes.img, classes.backgroundBanner)}>
-                          <div className={classes.decoMask}>
-                            <svg className={classes.main}>
-                              <use xlinkHref="/images/decoration/banner-mask.svg#main" />
-                            </svg>
-                            <svg className={classes.darken}>
-                              <use xlinkHref="/images/decoration/banner-mask.svg#main" />
-                            </svg>
-                          </div>
-                          <img className={classes.cover} src={imgAPI.photosL[49]} alt="cover" />
-                        </div>
-                        <div className={classes.decoBanner}>
-                          <div className={classes.videoArt}>
-                            <VideoBanner
-                              action={handleClickOpen}
-                              cover={imgAPI.photosL[48]}
-                              topLeft={imgAPI.apps[4]}
-                              topRight={imgAPI.apps[5]}
-                              bottomLeft={imgAPI.apps[7]}
-                              bottomRight={imgAPI.apps[6]}
-                            />
-                            {isMobile && (
-                              <div className={classes.additionalArt}>
-                                <VideoBanner
-                                  cover={imgAPI.apps[16]}
-                                  topLeft={imgAPI.apps[5]}
-                                  topRight={imgAPI.apps[1]}
-                                  bottomLeft={imgAPI.apps[2]}
-                                  bottomRight={imgAPI.apps[16]}
-                                />
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </Grid>
-                  </Grid>
-                </Container>
-              </div>
-            </div>
-          </Carousel>
         </div>
         <Hidden mdDown>
           <div className={classes.slideNav}>

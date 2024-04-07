@@ -16,7 +16,6 @@ import Grid from '@mui/material/Grid';
 import { useTranslation } from 'next-i18next';
 import VideoCard from '../../Cards/Media/MediaCard';
 import ParallaxLeft from '../Parallax/ParallaxLeft';
-import Icons3d from '../../Icons3d';
 import imgAPI from '~/public/images/imgAPI';
 import yt from '~/youtube';
 import { useText, useTextAlign } from '~/theme/common';

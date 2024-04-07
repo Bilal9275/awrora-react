@@ -121,7 +121,7 @@ function BannerSlider() {
                             size="large"
                             color="primary"
                             variant="contained"
-                            href={link.register}
+                            onClick={()=>window.open("https://ted-ai.netlify.app", "_blank")}
                             className={classes.button}
                           >
                             {t("btn_get")}

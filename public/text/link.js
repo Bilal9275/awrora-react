@@ -27,6 +27,7 @@ const link = {
   cv: '/online-cv',
   nft: '/nft',
   nft2: '/nft2',
+  preSale: "/PreSale",
   buy: 'https://themeforest.net/item/gerhana-multipurpose-sketch-landing-page-template/32892310'
 };
 

@@ -93,6 +93,7 @@ const sliderStyle = makeStyles({ uniqId: 'banner_slider' })((theme, _params, cla
   },
   decoBanner: {
     position: 'relative',
+    background: 'linear-gradient(180deg, #000, rgba(0, 0, 0, .12))',
     zIndex: 10,
     [theme.breakpoints.down('md')]: {
       display: 'flex',
@@ -257,7 +258,7 @@ const sliderStyle = makeStyles({ uniqId: 'banner_slider' })((theme, _params, cla
       fontWeight: theme.typography.fontWeightBold,
       marginBottom: theme.spacing(2)
     },
-    '& h5': {
+    '& span': {
       marginBottom: theme.spacing(4)
     }
   },

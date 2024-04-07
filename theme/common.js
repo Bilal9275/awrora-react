@@ -314,6 +314,19 @@ export const useText = makeStyles({ uniqId: 'text' })(theme => ({
       lineHeight: '44px'
     },
   },
+  titlePresale:{
+    fontWeight: theme.typography.fontWeightBold,
+    fontSize: 28,
+    // lineHeight: '12px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: 18,
+      lineHeight: '10px'
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 14,
+      lineHeight: '14px'
+    },
+  },
   title2: {
     fontSize: 36,
     lineHeight: '56px',
@@ -337,6 +350,35 @@ export const useText = makeStyles({ uniqId: 'text' })(theme => ({
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: 18,
+      lineHeight: '28px',
+    },
+  },
+  subtitlePresale:{
+    fontWeight: theme.typography.fontWeightMedium,
+    fontSize: 18,
+    // lineHeight: '44px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: 14,
+      lineHeight: '36px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 14,
+      lineHeight: '28px',
+    },
+  },
+  titlePresaleSecond: {
+    fontWeight: theme.typography.fontWeightMedium,
+    textAlign: "center",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    fontSize: 14,
+    // lineHeight: '44px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: 14,
+      lineHeight: '36px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 14,
       lineHeight: '28px',
     },
   },

@@ -55,7 +55,7 @@ function Fintech(props) {
           <section id="home">
             <BannerSlider />
           </section>
-          <section id="howto" className={classes.spaceTop}>
+          {/* <section id="howto" className={classes.spaceTop}>
             <Step />
           </section>
           <section id="chart" className={classes.spaceTop}>
@@ -78,7 +78,7 @@ function Fintech(props) {
           </section>
           <section id="faq" className={classes.spaceTopShort}>
             <Faq />
-          </section>
+          </section> */}
         </main>
         <FooterDeco>
           <div>
