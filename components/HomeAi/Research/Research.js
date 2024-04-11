@@ -130,7 +130,7 @@ function PopularCourse() {
 
   return (
     <div className={classes.root}>
-      <Container className={classes.carouselHeader}>
+      {/* <Container className={classes.carouselHeader}>
         <Title
           text={t('ai-landing.research_title')}
           align={isMobile ? 'center' : 'left'}
@@ -198,7 +198,7 @@ function PopularCourse() {
         >
           <i className="ion-ios-arrow-forward" />
         </IconButton>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { makeStyles } from 'tss-react/mui';
 
-const illustration = '/images/ai/community-full.png';
+const illustration = "/images/pandaAI.jpeg"
 const useStyles = makeStyles({ uniqId: 'action' })(theme => ({
   action: {
     textAlign: 'center',
@@ -34,13 +34,13 @@ const useStyles = makeStyles({ uniqId: 'action' })(theme => ({
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(1),
     [theme.breakpoints.up('sm')]: {
-      background: `url(${illustration}) no-repeat transparent`,
+      // background: `url(${illustration}) no-repeat transparent`,
       backgroundPosition: theme.direction === 'rtl' ? 'center 0%' : 'center 120%',
       backgroundSize: '100% auto',
-      paddingBottom: theme.spacing(10),
+      // paddingBottom: theme.spacing(10),
     },
     [theme.breakpoints.up('lg')]: {
-      paddingBottom: theme.spacing(20),
+      // paddingBottom: theme.spacing(20),
     },
   },
   btnArea: {

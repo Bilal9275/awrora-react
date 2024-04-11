@@ -7,7 +7,7 @@ import Container from '@mui/material/Container';
 import link from '~/public/text/link';
 import { useText } from '~/theme/common';
 import useStyles from './action-style';
-
+import pandaAI from "../../../public/images/pandaAI.jpeg"
 function CallAction() {
   // Translation Function
   const { t } = useTranslation('common');
@@ -40,6 +40,7 @@ function CallAction() {
                 {t('btn_detail')}
               </Button>
             </div>
+            <img  src={pandaAI} alt="pandaAI" className='img-fluid' width={900}/>
           </div>
         </div>
       </ScrollAnimation>

@@ -168,14 +168,14 @@ function MyApp(props) {
               />
               {uiState.themeptions && (
                 <>
-                  <ThemePalette
+                  {/* <ThemePalette
                     changeColor={handleChangeColor}
                     changeDir={toggleDirection}
                     changeMode={toggleDarkTheme}
                     isDark={themeMode}
                     isRtl={direction}
                     selectedColor={color}
-                  />
+                  /> */}
                 </>
               )}
             </div>

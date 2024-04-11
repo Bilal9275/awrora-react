@@ -80,7 +80,7 @@ function MixedNav(props) {
         </li>
       ))}
       <li>
-        <div>
+        {/* <div>
           <Button
             onClick={(e) => handleToggle(e)}
             ref={anchorRef}
@@ -205,7 +205,7 @@ function MixedNav(props) {
               </Fade>
             )}
           </Popper>
-        </div>
+        </div> */}
       </li>
     </Scrollspy>
   );

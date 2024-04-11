@@ -32,7 +32,7 @@ function Business() {
         </p>
       </Box>
       <Grid container className={classes.step} spacing={isDesktop ? 6 : 0}>
-      <img src={roadmap} alt='roadmap' width="100%"/>
+      {/* <img src={roadmap} alt='roadmap' width="100%"/> */}
         {/* {businessData.map((item, index) => (
           <div key={index.toString()}>
             <ScrollAnimation

@@ -85,7 +85,7 @@ function NewsEvent() {
         </p>
       </Container>
       <div className={classes.carousel}>
-        <Carousel {...settings}>
+        {/* <Carousel {...settings}>
           {newsContent.map((item, index) => (
             <div key={index.toString()}>
               <div className={classes.item}>
@@ -100,7 +100,7 @@ function NewsEvent() {
               </div>
             </div>
           ))}
-        </Carousel>
+        </Carousel> */}
       </div>
     </div>
   );

@@ -68,7 +68,7 @@ function MainFeature() {
 
   return (
     <div className={classes.mainFeature}>
-      <ParallaxLeft />
+      {/* <ParallaxLeft />
       <Dialog
         open={openPopup}
         TransitionComponent={Transition}
@@ -110,9 +110,6 @@ function MainFeature() {
                   </div>
                 </Paper>
                 <Paper className={classes.paper}>
-                  {/* <div className={classes.icon}>
-                    <Icons3d icon="mdi-clock-time-eight-outline" color="purple" />
-                  </div> */}
                   <div className={cx(classes.glow, classes.purple)}>
                     <Typography variant="h4">
                       +200x
@@ -125,9 +122,6 @@ function MainFeature() {
               </div>
               <div className={classes.higher}>
                 <Paper className={classes.paper}>
-                  {/* <div className={classes.icon}>
-                    <Icons3d icon="mdi-atom" color="secondary" />
-                  </div> */}
                   <div className={cx(classes.glow, classes.secondary)}>
                     <Typography variant="h4">
                       50x
@@ -138,9 +132,6 @@ function MainFeature() {
                   </div>
                 </Paper>
                 <Paper className={classes.paper}>
-                  {/* <div className={classes.icon}>
-                    <Icons3d icon="mdi-robot-vacuum" color="accent" />
-                  </div> */}
                   <div className={cx(classes.glow, classes.accent)}>
                     <Typography variant="h4">
                       +20M
@@ -168,7 +159,7 @@ function MainFeature() {
             </div>
           </Grid>
         </Grid>
-      </Container>
+      </Container> */}
     </div>
   );
 }

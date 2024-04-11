@@ -330,7 +330,7 @@ function BannerSlider() {
         </Carousel>
       </div>
       <Hidden mdDown>
-        <div className={classes.slideNav}>
+        {/* <div className={classes.slideNav}>
           <nav>
             <ButtonBase
               className={cx(
@@ -373,7 +373,7 @@ function BannerSlider() {
               Interdum et malesuada fames ac ante
             </ButtonBase>
           </nav>
-        </div>
+        </div> */}
       </Hidden>
     </div>
   );

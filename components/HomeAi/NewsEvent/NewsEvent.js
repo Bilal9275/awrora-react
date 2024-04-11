@@ -74,8 +74,8 @@ function NewsEvent() {
   };
 
   return (
-    <div className={classes.root}>
-      <Title align="center" text={t('ai-landing.news_title')} />
+    <div >
+      {/* <Title align="center" text={t('ai-landing.news_title')} />
       <p className={cx(text.subtitle2, align.textCenter)}>
         {t('ai-landing.news_desc')}
       </p>
@@ -96,7 +96,7 @@ function NewsEvent() {
             </div>
           ))}
         </Carousel>
-      </div>
+      </div> */}
     </div>
   );
 }

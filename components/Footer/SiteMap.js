@@ -29,16 +29,16 @@ function Copyright() {
 }
 
 const footers = [
-  {
-    title: 'Company',
-    description: ['Team', 'History', 'Contact us', 'Locations'],
-    link: ['#team', '#history', '#contact-us', '#locations'],
-  },
-  {
-    title: 'Resources',
-    description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
-    link: ['#resource', '#resource-name', '#another-resource', '#final-resource'],
-  },
+  // {
+  //   title: 'Company',
+  //   description: ['Team', 'History', 'Contact us', 'Locations'],
+  //   link: ['#team', '#history', '#contact-us', '#locations'],
+  // },
+  // {
+  //   title: 'Resources',
+  //   description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
+  //   link: ['#resource', '#resource-name', '#another-resource', '#final-resource'],
+  // },
   {
     title: 'Legal',
     description: ['Privacy policy', 'Terms of use'],
@@ -143,18 +143,20 @@ function Footer(props) {
           </Grid>
           <Grid item xs={12} md={3}>
             <div className={classes.socmed}>
-              <IconButton aria-label="FB" className={classes.margin} size="small">
+              <a href='https://twitter.com/TedAi_io' target="_blank"><IconButton aria-label="FB" className={classes.margin} size="small">
                 <i className="ion-logo-twitter" />
               </IconButton>
-              <IconButton aria-label="TW" className={classes.margin} size="small">
+              </a>
+              <a href='https://www.facebook.com/profile.php?id=61558011519365' target="_blank"><IconButton aria-label="TW" className={classes.margin} size="small">
                 <i className="ion-logo-facebook" />
-              </IconButton>
-              <IconButton aria-label="IG" className={classes.margin} size="small">
+              </IconButton></a>
+              <a href='https://www.instagram.com/tedai.io/' target="_blank"><IconButton aria-label="IG" className={classes.margin} size="small">
                 <i className="ion-logo-instagram" />
+              </IconButton></a>
+              <a href='https://github.com/TedAIProject' target="_blank"><IconButton aria-label="LI" className={classes.margin} size="small">
+                <i className="ion-logo-github" />
               </IconButton>
-              <IconButton aria-label="LI" className={classes.margin} size="small">
-                <i className="ion-logo-linkedin" />
-              </IconButton>
+              </a>
             </div>
             <SelectLang toggleDir={toggleDir} />
           </Grid>
