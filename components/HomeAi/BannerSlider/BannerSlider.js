@@ -132,7 +132,7 @@ function BannerSlider() {
                             variant="outlined"
                             href="#"
                             className={classes.button}
-                            onClick={()=>window.open("https://drive.google.com/file/d/1IstbMh7wDtvmeHBnII-Og9CbUEuJPfWn/view?usp=sharing", "_blank")}
+                            onClick={()=>window.open("https://drive.google.com/file/d/14yx4rbA_JerYkWAsXb6W2oTzbIgzjOt-/view", "_blank")}
                           >
                             {t('btn_detail')}
                             {/* <Link href="https://drive.google.com/file/d/1IstbMh7wDtvmeHBnII-Og9CbUEuJPfWn/view?usp=sharing" target="_blank" style={{color: "#fff", textDecoration: "none"}}>{t('btn_detail')}</Link> */}
