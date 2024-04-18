@@ -40,7 +40,7 @@ function CallAction() {
                 {t('btn_detail')}
               </Button>
             </div>
-            <img  src={pandaAI} alt="pandaAI" className='img-fluid' width={900}/>
+            <img  src={pandaAI} alt="pandaAI" className='img-fluid' width="100%" style={{borderRadius: "15px"}}/>
           </div>
         </div>
       </ScrollAnimation>
