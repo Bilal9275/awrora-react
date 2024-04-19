@@ -66,34 +66,8 @@ function BlogHeader(props) {
                   <Logo type="landscape" />
                 </a>
               </div>
-              {isDesktop && (
-                <div className={classes.mainMenu}>
-                  <MultiLevel dataMenu={blogMenu} />
-                </div>
-              )}
             </nav>
-            <nav>
-              <Hidden smDown>
-                <SearchField short />
-              </Hidden>
-              { isDesktop && <span className={classes.vDivider} /> }
-              <Settings toggleDark={onToggleDark} toggleDir={onToggleDir} />
-            </nav>
-            { isMobile && (
-              <IconButton
-                onClick={handleOpenDrawer}
-                className={cx('hamburger hamburger--spin', classes.mobileMenu, openDrawer && 'is-active')}
-                size="large"
-              >
-                <span className="hamburger-box">
-                  <span className={cx(classes.bar, 'hamburger-inner')} />
-                </span>
-              </IconButton>
-            )}
           </div>
-          <Hidden smUp>
-            <SearchField />
-          </Hidden>
         </Container>
       </AppBar>
     </Fragment>

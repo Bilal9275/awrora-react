@@ -15,8 +15,9 @@ import Article from '~/components/Company/Blog/Article';
 import Sidebar from '~/components/Company/Blog/Sidebar';
 import Footer from '~/components/Footer';
 import brand from '~/public/text/brand';
+import PrvacyArticle from '../../components/Company/Blog/PrivacyArticle';
 
-function BlogDetail(props) {
+function Privacy(props) {
   const { classes, cx } = useSpacing();
   const { onToggleDark, onToggleDir } = props;
   return (
@@ -38,11 +39,8 @@ function BlogDetail(props) {
           <div className={classes.spaceBottom}>
             <Container>
               <Grid container spacing={4}>
-                <Grid item md={8} xs={12}>
-                  <Article />
-                </Grid>
-                <Grid item md={4} xs={12}>
-                  <Sidebar />
+                <Grid item md={12} xs={12}>
+                  <PrvacyArticle />
                 </Grid>
               </Grid>
             </Container>
@@ -56,7 +54,7 @@ function BlogDetail(props) {
   );
 }
 
-BlogDetail.propTypes = {
+Privacy.propTypes = {
   onToggleDark: PropTypes.func.isRequired,
   onToggleDir: PropTypes.func.isRequired,
 };
@@ -68,4 +66,4 @@ BlogDetail.propTypes = {
 const getStaticProps = makeStaticProps(['common']);
 export { getStaticPaths, getStaticProps };
 
-export default BlogDetail;
+export default Privacy;

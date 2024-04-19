@@ -18,6 +18,7 @@ import brand from '~/public/text/brand';
 import SelectLang from '../Utils/LangSwitch/Select';
 import { useTextAlign } from '~/theme/common';
 import useStyles from './sitemap-style';
+import link from '../../public/text/link';
 
 function Copyright() {
   return (
@@ -85,18 +86,27 @@ function Footer(props) {
                         {footer.title}
                       </Typography>
                       <ul>
-                        {footer.description.map((item, index) => (
-                          <li key={item}>
+                      <li >
                             <Link
-                              href={footer.link[index]}
+                              href={link.privacy}
                               variant="subtitle1"
                               color="textSecondary"
                               underline="hover"
                             >
-                              {item}
+                              Privacy policy
+                            </Link>
+                           
+                          </li>
+                          <li>
+                          <Link
+                              href={link.blogDetail}
+                              variant="subtitle1"
+                              color="textSecondary"
+                              underline="hover"
+                            >
+                              Terms of use
                             </Link>
                           </li>
-                        ))}
                       </ul>
                     </div>
                   )}

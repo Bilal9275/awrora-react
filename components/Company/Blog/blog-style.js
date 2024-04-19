@@ -318,6 +318,18 @@ const useStyles = makeStyles({ uniqId: 'blog' })((theme, _params, classes) => ({
   },
   flipRtl: {
     transform: theme.direction === 'rtl' ? 'scale(-1)' : 'inherit'
+  },
+  boxTerm:{
+    width: "100%",
+    // display: "flex",
+    // justifyContent: "center",
+    // textAlign: "center"
+  },
+  effective:{
+    paddingTop: "30px"
+  },
+  effectiveText:{
+    paddingTop: "15px"
   }
 }));
 

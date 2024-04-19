@@ -1,178 +1,138 @@
-import React from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import List from '@mui/material/List';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import { useTranslation } from 'next-i18next';
-import imgAPI from '~/public/images/imgAPI';
-import { useText, useTextAlign } from '~/theme/common';
-import CommentForm from '../../Comment/Form';
-import QuoteCard from '../../Cards/Testimonial/QuoteCard';
-import Title from '../../Title';
-import Item from '../../Comment/Item';
-import useStyles from './blog-style';
+import React from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import List from "@mui/material/List";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import { useTranslation } from "next-i18next";
+import imgAPI from "~/public/images/imgAPI";
+import { useText, useTextAlign } from "~/theme/common";
+import CommentForm from "../../Comment/Form";
+import QuoteCard from "../../Cards/Testimonial/QuoteCard";
+import Title from "../../Title";
+import Item from "../../Comment/Item";
+import useStyles from "./blog-style";
 
 function Article() {
   const { classes, cx } = useStyles();
   const { classes: text } = useText();
   const { classes: align } = useTextAlign();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   // Theme breakpoints
   const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
-
-  const comments = [{
-    name: 'John Doe',
-    avatar: '/images/avatars/pp_boy4.svg',
-    date: '13 Jan 2020',
-    comment:
-      'Maecenas nisl libero, id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
-  },
-  {
-    name: 'John Doe',
-    avatar: '/images/avatars/pp_boy4.svg',
-    date: '13 Jan 2020',
-    comment:
-      'Maecenas nisl libero, id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
-  },
-  {
-    name: 'John Doe',
-    avatar: '/images/avatars/pp_boy4.svg',
-    date: '13 Jan 2020',
-    comment:
-      'Maecenas nisl libero, id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
-  },
-  {
-    name: 'John Doe',
-    avatar: '/images/avatars/pp_boy4.svg',
-    date: '13 Jan 2020',
-    comment:
-      'Maecenas nisl libero, id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
-  }];
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <div className={classes.root}>
       <article className={classes.article}>
-        <section className={classes.socmedShare}>
-          <div className={classes.btnArea}>
-            <IconButton>
-              <i className={cx('ion-logo-linkedin', classes.indigoBtn)} />
-            </IconButton>
-            <IconButton>
-              <i className={cx('ion-logo-pinterest', classes.redBtn)} />
-            </IconButton>
-            <IconButton>
-              <i className={cx('ion-logo-facebook', classes.blueBtn)} />
-            </IconButton>
-            <IconButton>
-              <i className={cx('ion-logo-twitter', classes.cyanBtn)} />
-            </IconButton>
-            <IconButton>
-              <i className="ion-ios-mail" />
-            </IconButton>
-            <IconButton>
-              <i className="ion-md-link" />
-            </IconButton>
-          </div>
-          <Typography variant="h6">
-            Share
-          </Typography>
-        </section>
         <div className={classes.content}>
-          <Typography variant="h6" className={classes.categoryBlog}>
-            Maecenas rutrum
-          </Typography>
-          <Title strictAlign text="Interdum et Malesuada Fames Curabitur Blandit" />
-          <span className={text.caption}>June 19, 2020 by Oliver &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  12 min to read</span>
-          <figure className={classes.imageBlog}>
-            <img src={imgAPI.photosL[16]} alt="blog" />
-          </figure>
-          <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          <strong>Heading</strong>
-          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          <strong>Sub-heading</strong>
-          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          <p>Example code block Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo. Tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <strong>Sub-heading</strong>
-          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <figure className={classes.imageBlog}>
-            <img src={imgAPI.photosL[6]} alt="blog" />
-          </figure>
-          <ul className={classes.list}>
-            <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-            <li>Donec id elit non mi porta gravida at eget metus.</li>
-            <li>Nulla vitae elit libero, a pharetra augue.</li>
-          </ul>
-          <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a  pharetra augue.</p>
-          <ol>
-            <li>Vestibulum id ligula porta felis euismod semper.</li>
-            <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur  ridiculus mus.</li>
-            <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-          </ol>
+          <div className={classes.boxTerm}>
+            <h2 className={classes.termCase}>TedAI Terms of Use</h2>
+          </div>
+          <h4 className={classes.effective}>Effective Date: 04.04.2024</h4>
+          <h3 className={classes.effective}>1. Introduction</h3>
+          <p className={classes.effectiveText}>
+            Welcome to TedAI! These Terms of Use govern your access to and use
+            of our website, mobile applications, services, and products
+            (collectively, "Services"), provided by TedAI.
+          </p>
+          <p>
+            By accessing or using our Services, you agree to be bound by these
+            Terms and all terms incorporated by reference. If you do not agree
+            to all of these terms, do not use our Services.
+          </p>
+          <h3 className={classes.effective}>2. Eligibility</h3>
+          <p className={classes.effectiveText}>
+            To access or use our Services, you must be at least 18 years old or
+            the age of legal majority in your jurisdiction, whichever is higher.
+            By using TedAI, you represent and warrant that you meet this age
+            requirement.
+          </p>
+          <h3 className={classes.effective}>3. TedAI Account</h3>
+          <p className={classes.effectiveText}>
+            <b>Registration:</b> You may need to register for a TedAI account to
+            access certain services. By registering, you agree to provide
+            accurate, current, and complete information and to keep this
+            information updated.
+          </p>
+          <p>
+            <b>Security:</b> You are responsible for safeguarding your account
+            password and for all activities that occur under your account. TedAI
+            cannot and will not be liable for any loss or damage arising from
+            your failure to comply with the above.
+          </p>
+          <h3 className={classes.effective}>4. Intellectual Property Rights</h3>
+          <p className={classes.effectiveText}>
+            All intellectual property rights in the Services, including the
+            design, graphics, text, and all software and source codes connected
+            with the Services, are owned by TedAI or its licensors. You may use
+            the Services only as expressly permitted by these Terms and any
+            applicable laws.
+          </p>
+          <h3 className={classes.effective}>5. Use of Services</h3>
+          <p className={classes.effectiveText}>
+            You agree to use the Services only for lawful purposes and not to:
+          </p>
+          <p>
+            Engage in any activity that disrupts, interferes with, or restricts
+            the use of the Services by other users.
+          </p>
+          <p>
+            Upload, post, or distribute to or through the Services any material
+            or information that is illegal, harmful, threatening, abusive,
+            harassing, defamatory, vulgar, obscene, or otherwise objectionable.
+          </p>
+          <p>
+            Attempt to gain unauthorized access to the Services, other accounts,
+            computer systems, or networks connected to the Services.
+          </p>
+          <h3 className={classes.effective}>6. Modifications to Services</h3>
+          <p className={classes.effectiveText}>
+            TedAI reserves the right at any time and from time to time to modify
+            or discontinue, temporarily or permanently, the Services (or any
+            part thereof) with or without notice. You agree that TedAI shall not
+            be liable to you or to any third party for any modification,
+            suspension, or discontinuance of the Services.
+          </p>
+          <h3 className={classes.effective}>7. Termination</h3>
+          <p className={classes.effectiveText}>
+            TedAI may terminate or suspend your access to all or part of the
+            Services immediately, without prior notice or liability, if you
+            breach any of the terms or conditions of these Terms.
+          </p>
+          <h3 className={classes.effective}>8. Disclaimers</h3>
+          <p className={classes.effectiveText}>
+            The Services are provided on an "as is" and "as available" basis.
+            TedAI expressly disclaims all warranties of any kind, whether
+            express or implied, including, but not limited to, the implied
+            warranties of merchantability, fitness for a particular purpose, and
+            non-infringement.
+          </p>
+          <h3 className={classes.effective}>9. Limitation of Liability</h3>
+          <p className={classes.effectiveText}>
+            In no event shall TedAI, its officers, directors, employees, or
+            agents be liable for any indirect, incidental, special,
+            consequential, or punitive damages resulting from or related to your
+            use of the Services.
+          </p>
+          <h3 className={classes.effective}>10. Governing Law</h3>
+          <p className={classes.effectiveText}>
+            These Terms shall be governed by and construed in accordance with
+            the laws of [Jurisdiction], without giving effect to any principles
+            of conflicts of law.
+          </p>
+          <h3 className={classes.effective}>11. Changes to Terms</h3>
+          <p className={classes.effectiveText}>
+            TedAI reserves the right to change or update these Terms at any time
+            by posting the most current version of the Terms on the site with a
+            new effective date shown.
+          </p>
+          <h3 className={classes.effective}>12. Contact Us</h3>
+          <p className={classes.effectiveText}>If you have any questions about these Terms, please contact us at contact@tedai.com.</p>
         </div>
       </article>
-      <Box my={10}>
-        <QuoteCard
-          avatar={imgAPI.avatar[36]}
-          text="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
-          name="Jena Doe"
-          title="Client"
-        />
-      </Box>
-      {!isDesktop && (
-        <section className={classes.shareMobile}>
-          <Typography className={align.textCenter} variant="h6">
-            {t('blog_share')}
-          </Typography>
-          <div className={classes.btnArea}>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }} my={3}>
-              <IconButton>
-                <i className={cx('ion-logo-linkedin', classes.indigoBtn)} />
-              </IconButton>
-              <IconButton>
-                <i className={cx('ion-logo-pinterest', classes.redBtn)} />
-              </IconButton>
-              <IconButton>
-                <i className={cx('ion-logo-facebook', classes.blueBtn)} />
-              </IconButton>
-              <IconButton>
-                <i className={cx('ion-logo-twitter', classes.cyanBtn)} />
-              </IconButton>
-              <IconButton>
-                <i className="ion-ios-mail" />
-              </IconButton>
-              <IconButton>
-                <i className="ion-md-link" />
-              </IconButton>
-            </Box>
-          </div>
-        </section>
-      )}
-      <section className={classes.comment}>
-        <Typography className={align.textCenter} variant="h6">
-          {t('blog_write')}
-          &nbsp;(4)
-        </Typography>
-        <Box mt={3}>
-          <CommentForm avatar={imgAPI.avatar[6]} />
-        </Box>
-        <List component="div">
-          {comments.map((item, index) => (
-            <Item
-              key={index.toString()}
-              avatar={item.avatar}
-              name={item.name}
-              date={item.date}
-              comment={item.comment}
-              last={index >= comments.length - 1}
-            />
-          ))}
-        </List>
-      </section>
     </div>
   );
 }

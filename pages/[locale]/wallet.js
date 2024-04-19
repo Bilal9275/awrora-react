@@ -44,13 +44,13 @@ function Wallet(props) {
       </Head>
       <CssBaseline />
       <div className={classes.mainWrap}>
-        <Header
+        {/* <Header
           onToggleDark={onToggleDark}
           onToggleDir={onToggleDir}
           menu={singleMenu.wallet}
           home
           prefix="wallet"
-        />
+        /> */}
         <main className={cx(classes.containerFront, classes.containerWrap)}>
           <section id="home">
             <BannerSlider />

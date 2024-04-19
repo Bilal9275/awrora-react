@@ -28,5 +28,6 @@ const useStyles = makeStyles({ uniqId: 'presale' })(theme => ({
           }
         }
       },
+      
 }));
 export default useStyles;

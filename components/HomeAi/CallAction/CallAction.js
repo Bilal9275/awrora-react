@@ -33,7 +33,7 @@ function CallAction() {
               {t('ai-landing.cta_desc')}
             </p>
             <div className={classes.btnArea}>
-              <Button size="large" color="black" variant="contained" onClick={()=>window.open("https://ted-ai.netlify.app", "_blank")} className={classes.button}>
+              <Button size="large" color="black" variant="contained" onClick={()=>window.open("https://ted-ai.netlify.app")} className={classes.button}>
                 {t('btn_get')}
               </Button>
               <Button size="large" color="black" variant="outlined" href={link.about} className={classes.button}
