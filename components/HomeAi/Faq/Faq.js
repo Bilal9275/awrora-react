@@ -44,7 +44,7 @@ function Faq() {
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
   const { t } = useTranslation('common');
-  const [expanded, setExpanded] = React.useState(0);
+  const [expanded, setExpanded] = React.useState();
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };

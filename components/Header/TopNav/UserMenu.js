@@ -19,8 +19,8 @@ function UserMenu(props) {
     <div className={classes.userMenu}>
       { isDesktop && (
         <div>
-          <Button color="primary" href={link.login}>{t('login')}</Button>
-          <Button variant="contained" color="primaryLight" href={link.register}>{t('register')}</Button>
+          <Button color="primary" href="https://ted-ai.netlify.app/signin" target="_blank">{t('login')}</Button>
+          <Button variant="contained" color="primaryLight" href="https://ted-ai.netlify.app/signup" target="_blank">{t('register')}</Button>
           <span className={classes.vDivider} />
         </div>
       )}
