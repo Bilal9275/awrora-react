@@ -10,7 +10,7 @@ function Corner(props) {
 
   return (
     <div>
-      { state.corner === 'chat' && <Chat /> }
+      {/* { state.corner === 'chat' && <Chat /> } */}
       { state.corner === 'nav' && <PageNav prefix={prefix} menuList={menuList} /> }
     </div>
   );
